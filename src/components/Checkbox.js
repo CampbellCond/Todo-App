@@ -17,6 +17,7 @@ const CheckboxInput = styled.label`
     left: 4px;
     border-radius: 50%;
     background-color: ${props => (props.checked ? '#007afe' : 'transparent')};
+    cursor: pointer;
   }
 `
 

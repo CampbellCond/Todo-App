@@ -3,7 +3,13 @@ import styled from 'styled-components'
 const Button = styled.button`
   font-size: ${props => (props.size === 'sm' ? 14 : 16)}px;
   background-color: ${props =>
-    props.primary ? (props.type === 'danger' ? 'red' : props.type === 'success' ? 'green' : '#007afe') : '#E7E7E9'};
+    props.primary
+      ? props.type === 'danger'
+        ? 'red'
+        : props.type === 'success'
+        ? 'green'
+        : '#007afe'
+      : props.theme.actionBackgroundColor};
   color: ${props =>
     props.primary ? 'white' : props.type === 'danger' ? 'red' : props.type === 'success' ? 'green' : '#007afe'};
   font-weight: 500;
